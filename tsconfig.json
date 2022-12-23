@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "config/index.d.ts", "config/typings.d.ts"  ]
 }
