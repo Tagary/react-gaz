@@ -1,14 +1,18 @@
 import React from 'react';
 import Modal from '../components/Modal';
 
+import Volume from '../components/Volume';
+
 const Main = () => {
-  const [modal, setModal] = React.useState(false);
-  const handlerModal = () => {
-    setModal(true);
-  };
+  const [open, setOpen] = React.useState<boolean>(false);
+
+
+
+
   return (
-    <div className={modal ? 'overlay' : ''}>
-      {modal && <Modal />}
+
+    <div >
+      {open && <Modal open={open} setModal={setOpen}/>}
       <section className="header__section">
         <header className="header__container">
           <div className="header__logo">
@@ -50,7 +54,7 @@ const Main = () => {
                 <h1 className="info__delivery">Доставим газ за 4 часа</h1>
                 <div className="txt__anotherdots">в любую точку Москвы и Московской области</div>
                 <div className="button__container">
-                  <button className="button__order">Заказать доставку газа в газгольдер</button>
+                  <button className="button__order" onClick={() => setOpen(true)}>Заказать доставку газа в газгольдер</button>
                 </div>
                 <div>
                   <p className="text__information">Доставка газа всегда по актуальным ценам</p>
@@ -75,7 +79,7 @@ const Main = () => {
               с вами погодных условиях{' '}
             </p>
             <div className="button__mob">
-              <button className="button__gaz">Заказать</button>
+              <button className="button__gaz" onClick={() => setOpen(true)}>Заказать</button>
             </div>
           </div>
           <div className="infoprice__second">
@@ -103,7 +107,7 @@ const Main = () => {
               время года{' '}
             </p>
             <div className="button__mob">
-              <button className="button__gaz">Заказать</button>
+              <button className="button__gaz" onClick={() => setOpen(true)}>Заказать</button>
             </div>
           </div>
         </div>
@@ -214,40 +218,7 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="choicevolume">
-        <div className="choicevolume__container">
-          <div className="choicevolume__article">
-            <h2 className="choicevolume__article--blue">Выберите свой объём Газовоза</h2>
-          </div>
-          <div className="choicevolum__choice">
-            <button className="choicevolume__button choicevolume__button--active">
-              Малый <br />
-              2000 л.
-            </button>
-            <button className="choicevolume__button">
-              Средний <br />
-              6000 л.
-            </button>
-            <button className="choicevolume__button">
-              Стандартный <br />
-              10 000 л.
-            </button>
-            <button className="choicevolume__button">
-              Оптовый <br />
-              40 000 л.
-            </button>
-          </div>
-          <div className="choicevolume__img">
-            <img src="assets/images/choicevolume/2k.png" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
-          <div className="choicevolume__button--order">
-            <button className="button__order">Заказать газ</button>
-          </div>
-        </div>
-      </section>
+      <Volume  setOpen={setOpen}/>
       <section className="reviews">
         <div className="reviews__container">
           <h2 className="reviews__ourclients">Отзывы наших клиентов</h2>
