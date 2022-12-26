@@ -8,7 +8,7 @@ interface VolumeProps {
   }
 
 const Volume:FC<VolumeProps> = ({ setOpen}) => {
-    const [data, setData] = React.useState<IVolume[]>();
+    const [data, setData] = React.useState<IVolume[]>([]);
     const [volume, setVolume] = React.useState<number>(0);
     const [volumeimg, setVolumeImg] = React.useState<string>('2k');
 

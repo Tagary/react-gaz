@@ -414,7 +414,7 @@ section {
 }
 
 .choicevolume__img {
-  max-width: 600px;
+  max-width: 400px;
   margin: 30px auto 0 auto;
 }
 
@@ -500,6 +500,10 @@ section {
   padding: 40px;
   border-radius: 40px;
   margin: 40px 100px 20px 100px;
+}
+
+.reviews__cardnone {
+  display: none;
 }
 
 .reviews__img {

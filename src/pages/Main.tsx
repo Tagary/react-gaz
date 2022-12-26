@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../components/Modal';
+import Reviews from '../components/Reviews';
 
 import Volume from '../components/Volume';
 
@@ -219,44 +220,7 @@ const Main = () => {
         </div>
       </section>
       <Volume  setOpen={setOpen}/>
-      <section className="reviews">
-        <div className="reviews__container">
-          <h2 className="reviews__ourclients">Отзывы наших клиентов</h2>
-
-          <div className="reviews__info">
-            <div className="reviews__item">
-              <div>
-                <img className="reviews__arrowleft" src="assets/svg/arrowreviews.svg" alt="" />
-              </div>
-              <div className="reviews__card">
-                <div className="reviews__img">
-                  <img src="assets/images/reviews/firstreviews.png" alt="" />
-                </div>
-                <div>
-                  <div className="reviews__username">Ольга И.</div>
-                  <div className="reviews__city">Красногорск</div>
-                  <div className="reviews__text">
-                    Я всегда боюсь газа , а особенно боюсь что он может взорваться, как же мне помог
-                    Андрей водитель-экспедитор показал что бояться тут нечего и самое главное моего
-                    присутствие даже не понадобится. Спасибо компании за то что они все закрыли этот
-                    вопрос под ключ.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img className="reviews__arrowright" src="assets/svg/arrowreviews.svg" alt="" />
-              </div>
-            </div>
-            <div className="reviews__dots">
-              <div className="dots dots__active"></div>
-              <div className="dots"></div>
-              <div className="dots"></div>
-              <div className="dots"></div>
-              <div className="dots"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Reviews/>
       <section className="accordion">
         <div className="accordion__container">
           <h2 className="accordion__title">Ответы на часто задаваемые вопросы</h2>
