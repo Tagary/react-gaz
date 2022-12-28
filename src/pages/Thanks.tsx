@@ -12,7 +12,7 @@ const Thanks = () => {
               <a href="" className="tel">
                 +7 926 330-68-34
               </a>
-              <a href="" className="ask">
+              <a href=""  className="ask">
                 Срочный вопрос
               </a>
             </div>
