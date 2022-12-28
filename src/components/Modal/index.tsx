@@ -23,15 +23,20 @@ const ModalComponents:FC<ModalProps> = ({open, setModal}) => {
           </div>
         </div>
         <div>
-          <form className={styles.modal__form} action="">
+          <form className={styles.modal__form} action="/thanks">
             <input required placeholder="Имя" type="text" />
             <input required placeholder="Телефон" type="tel" />
-          </form>
-          <div>
+            <div>
             <button className={styles.modal__button} >Заказать доставку газа</button>
           </div>
+          </form>
+
         </div>
+        <div className={styles.modal__information}>
+      Нажимая на кнопку, вы даёте согласие на обработку персональных данных и соглашаетесь с условиями политики конфиденциальности
       </div>
+      </div>
+
     </div>
     </div>
   );

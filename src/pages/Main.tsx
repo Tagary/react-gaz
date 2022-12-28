@@ -226,11 +226,11 @@ const Main = () => {
           <h2 className="accordion__title">Ответы на часто задаваемые вопросы</h2>
           <details className="accordion__details">
             <summary className="accordion__article">Есть ли у вас инженеры в компании?</summary>
-            <p></p>
+            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">Делаете ли вы отчистку газгольдера?</summary>
-            <p></p>
+            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">
@@ -245,13 +245,13 @@ const Main = () => {
             <summary className="accordion__article">
               Вы предоставляете документы для субсидий?
             </summary>
-            <p></p>
+            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">
               Смогу ли я заказать во время праздников?
             </summary>
-            <p></p>
+            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </details>
         </div>
       </section>

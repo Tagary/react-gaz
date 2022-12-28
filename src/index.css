@@ -52,10 +52,12 @@
   text-decoration: unset;
   font-family: 'Russo One', sans-serif;
   font-weight: 400;
+  pointer-events:none;
 }
 
 .right__logo .ask {
   color: #2194ff;
+  pointer-events: none;
 }
 
 .header__logo {
@@ -853,6 +855,47 @@ details[open] {
   opacity: 0.8;
 }
 
+
+
+/* thanks */
+
+
+.thanks__page {
+  width: 100vw;
+  height: 100vh;
+ background: #222222; 
+}
+
+.thanks__maininfo {
+  margin-top: 70px;
+}
+
+.thanks__article {
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #2194FF;
+  text-align: center;
+}
+
+.thanks__info {
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+
+.container__button {
+  max-width: 361px;
+  width: 100%;
+
+  margin:  0 auto;
+  margin-top: 51px;
+}
+
+
 /* adaptiv */
 
 @media(max-width: 1024px) {
@@ -950,6 +993,7 @@ details[open] {
 
 
 }
+
 
 
 @media(max-width: 880px) {

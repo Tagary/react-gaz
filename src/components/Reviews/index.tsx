@@ -19,10 +19,10 @@ const Reviews = () => {
 
     const handlerClickArrow = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
       
-
-      
-      if(reviewsindex > -1 && reviewsindex < 5 && (event.target as Element).className === 'reviews__arrowright') {
-        if(reviewsindex >= 4) {
+      if(reviewsindex > -1 && reviewsindex < (data!.length) && (event.target as Element).className === 'reviews__arrowright') {
+        console.log(data?.length);
+        
+        if(reviewsindex >= (data!.length -1)) {
           setReviewsIndex(0)
           
         } else {
@@ -32,18 +32,12 @@ const Reviews = () => {
       }
       else {
         if(reviewsindex <= 0) {
-          setReviewsIndex(4)
-          console.log(reviewsindex);
+          setReviewsIndex(data!.length - 1)
         } 
         else {
         setReviewsIndex(reviewsindex - 1)
         }
       }
-        
-
-
-        
-
 
     }
 
