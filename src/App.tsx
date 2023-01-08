@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Main from "./pages/Main";
-import Thanks from "./pages/Thanks";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Main from './pages/Main';
+import Thanks from './pages/Thanks';
 
 function App() {
   return (

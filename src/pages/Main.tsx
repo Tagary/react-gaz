@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 import Modal from '../components/Modal';
 import Reviews from '../components/Reviews';
 
@@ -6,14 +7,16 @@ import Volume from '../components/Volume';
 
 const Main = () => {
   const [open, setOpen] = React.useState<boolean>(false);
+  const [thanks, setThanks] = React.useState<boolean>(false);
+  console.log(thanks);
 
-
-
+  if (thanks) {
+    return <Navigate to="thanks" />;
+  }
 
   return (
-
-    <div >
-      {open && <Modal open={open} setModal={setOpen}/>}
+    <div>
+      {open && <Modal open={open} setModal={setOpen} thanks={thanks} setThanks={setThanks} />}
       <section className="header__section">
         <header className="header__container">
           <div className="header__logo">
@@ -55,7 +58,9 @@ const Main = () => {
                 <h1 className="info__delivery">Доставим газ за 4 часа</h1>
                 <div className="txt__anotherdots">в любую точку Москвы и Московской области</div>
                 <div className="button__container">
-                  <button className="button__order" onClick={() => setOpen(true)}>Заказать доставку газа в газгольдер</button>
+                  <button className="button__order" onClick={() => setOpen(true)}>
+                    Заказать доставку газа в газгольдер
+                  </button>
                 </div>
                 <div>
                   <p className="text__information">Доставка газа всегда по актуальным ценам</p>
@@ -80,7 +85,9 @@ const Main = () => {
               с вами погодных условиях{' '}
             </p>
             <div className="button__mob">
-              <button className="button__gaz" onClick={() => setOpen(true)}>Заказать</button>
+              <button className="button__gaz" onClick={() => setOpen(true)}>
+                Заказать
+              </button>
             </div>
           </div>
           <div className="infoprice__second">
@@ -108,7 +115,9 @@ const Main = () => {
               время года{' '}
             </p>
             <div className="button__mob">
-              <button className="button__gaz" onClick={() => setOpen(true)}>Заказать</button>
+              <button className="button__gaz" onClick={() => setOpen(true)}>
+                Заказать
+              </button>
             </div>
           </div>
         </div>
@@ -219,18 +228,24 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <Volume  setOpen={setOpen}/>
-      <Reviews/>
+      <Volume setOpen={setOpen} />
+      <Reviews />
       <section className="accordion">
         <div className="accordion__container">
           <h2 className="accordion__title">Ответы на часто задаваемые вопросы</h2>
           <details className="accordion__details">
             <summary className="accordion__article">Есть ли у вас инженеры в компании?</summary>
-            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="accordion__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">Делаете ли вы отчистку газгольдера?</summary>
-            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="accordion__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">
@@ -245,13 +260,19 @@ const Main = () => {
             <summary className="accordion__article">
               Вы предоставляете документы для субсидий?
             </summary>
-            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="accordion__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
           </details>
           <details className="accordion__details">
             <summary className="accordion__article">
               Смогу ли я заказать во время праздников?
             </summary>
-            <p className="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="accordion__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
           </details>
         </div>
       </section>
@@ -341,7 +362,9 @@ const Main = () => {
             Закажи прямо сейчас и получи бесплатную установку телеметрии
           </h2>
           <div className="button__containerfooter">
-            <button className="button__footer">Заказать газ</button>
+            <button className="button__footer" onClick={() => setOpen(true)}>
+              Заказать газ
+            </button>
           </div>
           <div className="footer__card">
             <div className="footer__cardinfo">
